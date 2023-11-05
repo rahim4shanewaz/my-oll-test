@@ -7,7 +7,7 @@ use some resource from online, like MDN, FreeCodeCamp, some communities for solv
 
 
 Live Site: 
-- [Images Gallery implement](https://image-gallery-reactvite.netlify.app/)
+- [Images Gallery  Live Site](https://image-gallery-reactvite.netlify.app/)
 
 
 Feature:
@@ -23,8 +23,6 @@ Technology used in this gallery
 3. CSS
 
 # my-oll-test
-
-
 some of my Other works React JS Node, MongoDB, tailwind, firebase etc.
 - [My Favorite Activities](https://jazzy-hummingbird-2cac59.netlify.app/)
 - [Make Your Own Team](https://spectacular-mousse-56c7d2.netlify.app/)
