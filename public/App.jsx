@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 import checkmarkIcon from './images/check.png'
 import imageIcon from './images/image_icon.png'
-
 import {
   DndContext,
   closestCenter,
@@ -12,7 +11,6 @@ import {
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
-
 import {
   arrayMove,
   SortableContext,
@@ -27,14 +25,17 @@ import photos from './photos.json';
 const UploadGallery = () => {
   const [items, setItems] = useState(photos);
   const [activeId, setActiveId] = useState(null);
-  const [selectedItems, setSelectedItems] = useState([]);  //State to track selected images
-  const sensors = useSensors(useSensor(MouseSensor), useSensor(TouchSensor));  // DND feature from DND
-  const [selectedCount, setSelectedCount] = useState(selectedItems.length); //State to track selected count
+  const [selectedItems, setSelectedItems] = useState([]);
+  const sensors = useSensors(useSensor(MouseSensor), useSensor(TouchSensor));
+
+
+
+  const [selectedCount, setSelectedCount] = useState(selectedItems.length); // Step 1: State to track selected count
 
 
 
 
-  const calculateColumns = () => {                // responsive feature
+  const calculateColumns = () => {
     const screenWidth = window.innerWidth;
     let columns = 5;
 
@@ -52,9 +53,9 @@ const UploadGallery = () => {
     return columns;
   };
 
-  
+  // const [selectedItems, setSelectedItems] = useState([]);
 
-  const handleCheckboxChange = (index) => {          //checkbox function
+  const handleCheckboxChange = (index) => {
     let updatedSelectedItems;
     if (selectedItems.includes(index)) {
       updatedSelectedItems = selectedItems.filter((item) => item !== index);
@@ -71,7 +72,7 @@ const UploadGallery = () => {
     }
   };
   
-  const handleDeleteSelected = () => {    //delete function
+  const handleDeleteSelected = () => {
     const filteredItems = items.filter((item, index) => !selectedItems.includes(index));
     setItems(filteredItems);
     setSelectedItems([]);
@@ -82,7 +83,7 @@ const UploadGallery = () => {
 
 
 
-function handleDragEnd(event) {           // dragging and re arreneging feature from DND
+function handleDragEnd(event) {
   const { active, over } = event;
 
   if (active && over && active.id && over.id && active.id !== over.id) {
