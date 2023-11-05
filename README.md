@@ -26,7 +26,7 @@ Technology used in this gallery
 
 
 some of my Other works React JS Node, MongoDB, tailwind, firebase etc.
-
+- [My Favorite Activities](https://jazzy-hummingbird-2cac59.netlify.app/)
 - [Make Your Own Team](https://spectacular-mousse-56c7d2.netlify.app/)
 - [News Portal](https://dreamy-cocada-eb03f6.netlify.app/)
 - [QUIZ Hunter](https://effervescent-marzipan-53449e.netlify.app/)
